@@ -1,0 +1,28 @@
+<form #registrationForm="ngForm">
+    <div class="form-group pt-1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" [(ngModel)]="registerDto.name"
+            required>
+    </div>
+
+    <div class="form-group pt-1">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control"
+            [(ngModel)]="registerDto.email" required>
+    </div>
+
+    <div class="form-group pt-1">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control"
+            [(ngModel)]="registerDto.password" required>
+    </div>
+    <div class="row pt-2 clearfix">
+        <button type="button" class="btn btn-primary btn-block"
+            (click)="register(registerDto)">Register</button>
+    </div>
+    <div class="mt-2 clearfix">
+        <span class="text-danger">
+            {{message}}
+        </span>
+    </div>
+</form>

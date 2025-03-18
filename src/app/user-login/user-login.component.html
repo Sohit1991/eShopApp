@@ -1,0 +1,31 @@
+
+            <form #loginForm="ngForm">
+              <div class="form-group pt-1">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" [(ngModel)]="loginDto.email" required>
+              </div>
+  
+              <div class="form-group pt-1">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control"
+                  [(ngModel)]="loginDto.password" required>
+              </div>
+              <div class="row pt-2 clearfix">
+                <button type="button" class="btn btn-primary btn-block" (click)="login(loginDto)">Login</button>
+              </div>
+
+              <div class="mt-2 clearfix">
+                <span class="text-danger">
+                  {{message}}
+                </span>
+              </div>
+
+              <div class="row pt-2 clearfix">
+                <button  mat-button 
+                  class="btn bg-light"
+                  (click)="skipToDashboard()">
+                  Skip
+                </button>
+              </div>
+            </form>
+
