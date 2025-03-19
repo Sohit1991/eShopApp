@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AuthPageComponent } from './auth-page.component';
 
@@ -8,7 +9,7 @@ describe('AuthPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthPageComponent]
+      imports: [AuthPageComponent,HttpClientModule]
     })
     .compileComponents();
     
