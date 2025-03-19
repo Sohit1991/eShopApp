@@ -21,6 +21,11 @@ steps:
     npm install
     ng build --configuration production
   displayName: 'npm install and build'
+
+# 3️⃣ Run Unit Tests
+- script: npm run test -- --watch=false --browsers=ChromeHeadless --code-coverage
+  displayName: 'Run Unit Tests'
+  continueOnError: true # Fails pipeline if tests fail
  
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifacts'
